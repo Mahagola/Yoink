@@ -1,0 +1,39 @@
+.signup__bg{
+    background-image: url(https://img.freepik.com/free-vector/social-media-ad-online-advertising-smm-network-announcement-media-content-followers-activity-geodata-internet-manager-cartoon-character-vector-isolated-concept-metaphor-illustration_335657-2845.jpg?t=st=1715360668~exp=1715364268~hmac=11c68eca55b9f8a4e675aad004cae1fd8ef6cf5dd4ecfecbfd3655526948f650&w=740);
+    background-position: center;
+    height: 92vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x:hidden;
+}
+
+.signup__box{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.signup-pfp-container{
+    width: 100px;
+    height: 100px;
+    margin:0 auto;
+    position: relative;
+
+}
+
+.signup-pfp{
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid grey;
+    object-fit: cover;
+    height: 100px;
+}
+
+.add-picture-icon{
+    position:absolute;
+    bottom: 0;
+    right: 10px;
+    color: green;
+    background : white;
+    cursor: pointer;
+    z-index: 99;
+}

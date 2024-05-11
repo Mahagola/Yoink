@@ -1,0 +1,13 @@
+.signin__bg{
+    background-image: url(https://img.freepik.com/free-vector/user-verification-unauthorized-access-prevention-private-account-authentication-cyber-security-people-entering-login-password-safety-measures_335657-3530.jpg?t=st=1715358110~exp=1715361710~hmac=79a89658028cf73ffb8632230a8dd52b8fb9c81223ef02a910cd5d5a1109526f&w=740);
+    background-position: center;
+    height: 92vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x:hidden;
+}
+
+.signin__box{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
