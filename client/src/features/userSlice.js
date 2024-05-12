@@ -5,8 +5,15 @@ export const userSlice = createSlice({
     name : 'user',
     initialState : null,
     reducers : {
-        addNotifications : (state, {payload})=>{},
-        resetNotifications : (state, {payload})=>{},
+        addNotifications : (state, {payload})=>{
+            if(state.newMessages[payload]){
+                state.newMessages[payload]++;
+            }
+            else state.newMessages[payload]=1;
+        },
+        resetNotifications : (state, {payload})=>{
+            delete state.newMessages[payload];
+        },
     },
 
     extraReducers : (builder)=>{

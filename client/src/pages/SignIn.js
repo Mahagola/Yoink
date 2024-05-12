@@ -1,13 +1,15 @@
-import {React,useState} from 'react';
+import {React,useState,useContext} from 'react';
 import { Row, Col, Form , Button, Container, Spinner} from 'react-bootstrap';
 import { Link ,useNavigate} from 'react-router-dom';
 import "./SignIn.css";
-import {useSignInUserMutation} from '../services/appApi'
-export default function SignIn() {
+import {useSignInUserMutation} from '../services/appApi';
+import { AppContext } from '../context/appContext'; 
 
+export default function SignIn() {
     const [email, setEmail]=useState('');
     const [password, setPassword]=useState('');
     const navigate = useNavigate();
+    const {socket} = useContext(AppContext);
     const [SignInUser, {isLoading, error}] = useSignInUserMutation();
     function handleLogin(e){
         e.preventDefault();
@@ -15,6 +17,8 @@ export default function SignIn() {
         //login logic
         SignInUser({email,password}).then(({data})=>{
             if(data){
+                //socket stuff
+                socket.emit('new-user')
                 navigate("/chat");
             }
         })
